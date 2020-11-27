@@ -14,4 +14,5 @@ deploy:
 	@echo ''
 	@$(foreach val, $(CONFIGDIRS), rm -rfv $(HOME)/.config/$(notdir $(val)))
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
+	@mkdir -p $(HOME)/.config
 	@$(foreach val, $(CONFIGDIRS), ln -sfnv $(abspath $(val)) $(HOME)/.config/$(notdir $(val));)
