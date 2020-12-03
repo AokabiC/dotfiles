@@ -3,7 +3,7 @@
 # for examples
 
 case $- in
-    *i*) exec fish;;
+    *i*) ;;
       *) return;;
 esac
 
